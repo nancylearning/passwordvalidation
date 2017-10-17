@@ -1,0 +1,4 @@
+    Function Islowercaseletter(ByVal password As String) As Boolean
+        Static passwordExpression As New Regex("[a-z]+")
+        Return passwordExpression.IsMatch(password)
+    End Function
