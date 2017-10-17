@@ -1,0 +1,4 @@
+    Function onedigit(ByVal password As String) As Boolean
+        Static passwordExpression As New Regex("[0-9]+")
+        Return passwordExpression.IsMatch(password)
+    End Function
