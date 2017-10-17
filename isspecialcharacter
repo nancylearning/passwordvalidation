@@ -1,0 +1,6 @@
+ Function Isspecialcharacter(ByVal password As String) As Boolean
+        'Valid special characters are -@#$%^&+=
+        'characters such as $, ^, ( and ) are special characters in the regular expression language, so they need to be escaped like so: \$.
+        Static passwordExpression As New Regex("[-@#\$%\^&+=]+")
+        Return passwordExpression.IsMatch(password)
+    End Function
