@@ -1,0 +1,24 @@
+              If Me.txtPassword.Text.Length < 8 Then
+                    Throw New Exception("Password must be at least 8 characters.")
+                    Exit Sub
+                    End If
+                Dim bIsuppercaseLetter As Boolean = IsuppercaseLetter(Me.txtPassword.Text)
+                If bIsuppercaseLetter = False Then
+                    Throw New Exception("Password must contain at least one upper case letter")
+                    Exit Sub
+                End If
+                Dim bIslowercaseletter As Boolean = Islowercaseletter(txtPassword.Text.ToString)
+                If bIslowercaseletter = False Then
+                    Throw New Exception("Password must contain at least one lower case letter")
+                    Exit Sub
+                End If
+                Dim bisdigit As Boolean = onedigit(txtPassword.Text.ToString)
+                If bisdigit = False Then
+                    Throw New Exception("Password must contain at least one digit")
+                    Exit Sub
+                End If
+                Dim specialcharacter As Boolean = Isspecialcharacter(txtPassword.Text.ToString)
+                If specialcharacter = False Then
+                    Throw New Exception("Password must contain at least one one special character.Valid special characters are -@#$%^&+=")
+                    Exit Sub
+                End If
