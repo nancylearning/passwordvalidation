@@ -1,0 +1,4 @@
+    Function IsuppercaseLetter(ByVal password As String) As Boolean
+        Static passwordExpression As New Regex("[A-Z]+")
+        Return passwordExpression.IsMatch(password)
+    End Function
